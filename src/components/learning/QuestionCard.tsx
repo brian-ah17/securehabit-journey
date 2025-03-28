@@ -54,12 +54,14 @@ const QuestionCard = ({ question, onComplete }: QuestionCardProps) => {
       });
     }
     
-    onComplete(correct);
+    // Don't automatically call onComplete anymore
+    // The user will need to click Continue
   };
 
   const handleNext = () => {
     setSelectedOption(null);
     setIsSubmitted(false);
+    onComplete(isCorrect);
   };
 
   return (
@@ -82,7 +84,7 @@ const QuestionCard = ({ question, onComplete }: QuestionCardProps) => {
                 ? "border-green-500 bg-green-50" 
                 : isSubmitted && index === selectedOption 
                   ? "border-red-500 bg-red-50" 
-                  : "border-slate-200"
+                  : "border-slate-200 hover:bg-slate-50 transition-colors"
             }`}>
               <RadioGroupItem value={index.toString()} id={`option-${index}`} />
               <Label htmlFor={`option-${index}`} className="flex-grow cursor-pointer">

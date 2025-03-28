@@ -9,7 +9,8 @@ import {
   AlertTriangle, 
   GraduationCap, 
   Settings,
-  ChevronRight
+  ChevronRight,
+  Library
 } from "lucide-react";
 
 type DashboardLayoutProps = {
@@ -44,6 +45,11 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       label: "Legal Context",
       icon: GraduationCap,
       path: "/modules/legal-context",
+    },
+    {
+      label: "Resources",
+      icon: Library,
+      path: "/resources",
     },
     {
       label: "Settings",

@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Question } from "../components/learning/QuestionCard";
@@ -157,7 +156,7 @@ const modulesData: Record<string, Module> = {
   "awareness": {
     title: "Awareness & Mindset",
     description: "Understand the fundamentals of cybercrime and develop a security mindset to protect yourself online.",
-    progress: 75,
+    progress: 0,
     estimatedTime: "30 minutes",
     points: 50,
     objectives: [
@@ -171,7 +170,7 @@ const modulesData: Record<string, Module> = {
         id: "unit-1",
         title: "Introduction to Cybersecurity",
         type: "video",
-        completed: true,
+        completed: false,
         duration: "5 min",
         locked: false
       },
@@ -179,7 +178,7 @@ const modulesData: Record<string, Module> = {
         id: "unit-2",
         title: "Types of Cyber Threats",
         type: "lesson",
-        completed: true,
+        completed: false,
         duration: "10 min",
         locked: false
       },
@@ -187,7 +186,7 @@ const modulesData: Record<string, Module> = {
         id: "unit-3",
         title: "Case Study: Ransomware Attack",
         type: "activity",
-        completed: true,
+        completed: false,
         duration: "8 min",
         locked: false
       },
@@ -204,7 +203,7 @@ const modulesData: Record<string, Module> = {
   "digital-hygiene": {
     title: "Digital Hygiene & Security",
     description: "Learn practical steps to secure your accounts, create strong passwords, and maintain good security practices.",
-    progress: 40,
+    progress: 0,
     estimatedTime: "45 minutes",
     points: 70,
     objectives: [
@@ -218,7 +217,7 @@ const modulesData: Record<string, Module> = {
         id: "unit-1",
         title: "Password Security Fundamentals",
         type: "video",
-        completed: true,
+        completed: false,
         duration: "6 min",
         locked: false
       },
@@ -226,7 +225,7 @@ const modulesData: Record<string, Module> = {
         id: "unit-2",
         title: "Two-Factor Authentication",
         type: "lesson",
-        completed: true,
+        completed: false,
         duration: "8 min",
         locked: false
       },
@@ -330,7 +329,7 @@ const modulesData: Record<string, Module> = {
         type: "video",
         completed: false,
         duration: "8 min",
-        locked: true
+        locked: false
       },
       {
         id: "unit-2",
@@ -338,7 +337,7 @@ const modulesData: Record<string, Module> = {
         type: "lesson",
         completed: false,
         duration: "10 min",
-        locked: true
+        locked: false
       },
       {
         id: "unit-3",
@@ -346,7 +345,7 @@ const modulesData: Record<string, Module> = {
         type: "activity",
         completed: false,
         duration: "12 min",
-        locked: true
+        locked: false
       },
       {
         id: "unit-4",
@@ -354,7 +353,7 @@ const modulesData: Record<string, Module> = {
         type: "quiz",
         completed: false,
         duration: "5 min",
-        locked: true
+        locked: false
       }
     ]
   }

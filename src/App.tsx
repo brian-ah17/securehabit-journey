@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import ModuleOverview from "./pages/ModuleOverview";
+import Resources from "./pages/Resources";
 import DashboardLayout from "./components/layout/DashboardLayout";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
               <ModuleOverview />
             </DashboardLayout>
           } />
+          <Route path="/resources" element={<Resources />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />
