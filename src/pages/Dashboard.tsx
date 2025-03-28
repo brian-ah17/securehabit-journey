@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ProgressCard from "@/components/dashboard/ProgressCard";
 import ModuleCard from "@/components/dashboard/ModuleCard";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [userName, setUserName] = useState("User");
@@ -136,10 +137,10 @@ const Dashboard = () => {
                     asChild
                     className="w-full sm:w-auto bg-cyber-primary hover:bg-cyber-primary/90"
                   >
-                    <a href={`/modules/${recommendedModule.id}`}>
+                    <Link to={`/modules/${recommendedModule.id}`}>
                       {recommendedModule.progress > 0 ? "Continue" : "Start"} Module
                       <ArrowRight size={16} className="ml-2" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
 

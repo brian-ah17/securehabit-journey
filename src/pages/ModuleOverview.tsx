@@ -93,6 +93,16 @@ const ModuleOverviewContent = () => {
     );
   }
 
+  // Function to start the first unlocked unit in the module
+  const startFirstAvailableUnit = () => {
+    if (module && module.units.length > 0) {
+      const firstUnlockedUnit = module.units.find(unit => !unit.locked);
+      if (firstUnlockedUnit) {
+        setSelectedUnit(firstUnlockedUnit);
+      }
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Navigation */}
@@ -133,7 +143,10 @@ const ModuleOverviewContent = () => {
 
         {/* Continue button */}
         <div className="flex justify-end">
-          <Button className="bg-cyber-primary hover:bg-cyber-primary/90">
+          <Button 
+            className="bg-cyber-primary hover:bg-cyber-primary/90"
+            onClick={startFirstAvailableUnit}
+          >
             {module.progress > 0 ? "Continue Module" : "Start Module"}
           </Button>
         </div>
