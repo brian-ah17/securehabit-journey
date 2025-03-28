@@ -29,7 +29,11 @@ const App = () => (
               <ModuleOverview />
             </DashboardLayout>
           } />
-          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources" element={
+            <DashboardLayout>
+              <Resources />
+            </DashboardLayout>
+          } />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />
