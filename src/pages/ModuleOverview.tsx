@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -15,214 +15,8 @@ import {
   LockKeyhole,
   ShieldCheck
 } from "lucide-react";
-
-// Mock data for modules
-const modulesData = {
-  "awareness": {
-    title: "Awareness & Mindset",
-    description: "Understand the fundamentals of cybercrime and develop a security mindset to protect yourself online.",
-    progress: 75,
-    estimatedTime: "30 minutes",
-    points: 50,
-    objectives: [
-      "Understand common types of cybercrime",
-      "Learn how cybercriminals target individuals",
-      "Develop a cybersecurity mindset",
-      "Recognize the importance of digital self-defense"
-    ],
-    units: [
-      {
-        id: "unit-1",
-        title: "Introduction to Cybersecurity",
-        type: "video",
-        completed: true,
-        duration: "5 min",
-        locked: false
-      },
-      {
-        id: "unit-2",
-        title: "Types of Cyber Threats",
-        type: "lesson",
-        completed: true,
-        duration: "10 min",
-        locked: false
-      },
-      {
-        id: "unit-3",
-        title: "Case Study: Ransomware Attack",
-        type: "activity",
-        completed: true,
-        duration: "8 min",
-        locked: false
-      },
-      {
-        id: "unit-4",
-        title: "Security Mindset Assessment",
-        type: "quiz",
-        completed: false,
-        duration: "7 min",
-        locked: false
-      }
-    ]
-  },
-  "digital-hygiene": {
-    title: "Digital Hygiene & Security",
-    description: "Learn practical steps to secure your accounts, create strong passwords, and maintain good security practices.",
-    progress: 40,
-    estimatedTime: "45 minutes",
-    points: 70,
-    objectives: [
-      "Create and manage strong passwords",
-      "Set up two-factor authentication",
-      "Secure your devices and accounts",
-      "Learn safe browsing practices"
-    ],
-    units: [
-      {
-        id: "unit-1",
-        title: "Password Security Fundamentals",
-        type: "video",
-        completed: true,
-        duration: "6 min",
-        locked: false
-      },
-      {
-        id: "unit-2",
-        title: "Two-Factor Authentication",
-        type: "lesson",
-        completed: true,
-        duration: "8 min",
-        locked: false
-      },
-      {
-        id: "unit-3",
-        title: "Device Security Checklist",
-        type: "activity",
-        completed: false,
-        duration: "12 min",
-        locked: false
-      },
-      {
-        id: "unit-4",
-        title: "Safe Browsing Practices",
-        type: "lesson",
-        completed: false,
-        duration: "10 min",
-        locked: false
-      },
-      {
-        id: "unit-5",
-        title: "Digital Hygiene Assessment",
-        type: "quiz",
-        completed: false,
-        duration: "9 min",
-        locked: false
-      }
-    ]
-  },
-  "threat-detection": {
-    title: "Recognizing Threats",
-    description: "Learn to identify phishing attempts, scams, and other common cyber threats through practical examples.",
-    progress: 0,
-    estimatedTime: "40 minutes",
-    points: 60,
-    objectives: [
-      "Identify phishing emails and messages",
-      "Recognize social engineering techniques",
-      "Detect common online scams",
-      "Learn proper reporting procedures"
-    ],
-    units: [
-      {
-        id: "unit-1",
-        title: "Phishing Fundamentals",
-        type: "video",
-        completed: false,
-        duration: "7 min",
-        locked: false
-      },
-      {
-        id: "unit-2",
-        title: "Social Engineering Tactics",
-        type: "lesson",
-        completed: false,
-        duration: "10 min",
-        locked: false
-      },
-      {
-        id: "unit-3",
-        title: "Phishing Email Detection",
-        type: "activity",
-        completed: false,
-        duration: "12 min",
-        locked: false
-      },
-      {
-        id: "unit-4",
-        title: "Scam Detection Practice",
-        type: "activity",
-        completed: false,
-        duration: "8 min",
-        locked: false
-      },
-      {
-        id: "unit-5",
-        title: "Threat Recognition Test",
-        type: "quiz",
-        completed: false,
-        duration: "8 min",
-        locked: false
-      }
-    ]
-  },
-  "legal-context": {
-    title: "Legal & Social Context",
-    description: "Understand the legal framework around cybercrime and how law enforcement addresses digital threats.",
-    progress: 0,
-    estimatedTime: "35 minutes",
-    points: 50,
-    objectives: [
-      "Understand cybersecurity regulations",
-      "Learn about law enforcement's role",
-      "Know your rights and responsibilities",
-      "Recognize reporting procedures"
-    ],
-    units: [
-      {
-        id: "unit-1",
-        title: "Introduction to Cybercrime Law",
-        type: "video",
-        completed: false,
-        duration: "8 min",
-        locked: true
-      },
-      {
-        id: "unit-2",
-        title: "Law Enforcement & Cybercrime",
-        type: "lesson",
-        completed: false,
-        duration: "10 min",
-        locked: true
-      },
-      {
-        id: "unit-3",
-        title: "Case Study: Legal Response",
-        type: "activity",
-        completed: false,
-        duration: "12 min",
-        locked: true
-      },
-      {
-        id: "unit-4",
-        title: "Legal Context Assessment",
-        type: "quiz",
-        completed: false,
-        duration: "5 min",
-        locked: true
-      }
-    ]
-  }
-};
+import UnitView from "@/components/learning/UnitView";
+import { ModuleProvider, useModule } from "@/contexts/ModuleContext";
 
 // Unit type icons
 const getUnitTypeIcon = (type: string) => {
@@ -240,22 +34,15 @@ const getUnitTypeIcon = (type: string) => {
   }
 };
 
-const ModuleOverview = () => {
-  const { moduleId } = useParams<{ moduleId: string }>();
-  const [module, setModule] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate API call to fetch module data
-    const timer = setTimeout(() => {
-      if (moduleId && modulesData[moduleId as keyof typeof modulesData]) {
-        setModule(modulesData[moduleId as keyof typeof modulesData]);
-      }
-      setLoading(false);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [moduleId]);
+const ModuleOverviewContent = () => {
+  const { 
+    loading, 
+    module, 
+    selectedUnit, 
+    setSelectedUnit, 
+    completeUnit,
+    getQuestionsForUnit 
+  } = useModule();
 
   if (loading) {
     return (
@@ -287,6 +74,22 @@ const ModuleOverview = () => {
           </Button>
         </div>
       </div>
+    );
+  }
+
+  // If a unit is selected, show the unit view
+  if (selectedUnit) {
+    const questions = getQuestionsForUnit(selectedUnit.id);
+    
+    return (
+      <UnitView
+        unitId={selectedUnit.id}
+        title={selectedUnit.title}
+        type={selectedUnit.type}
+        questions={questions}
+        onBack={() => setSelectedUnit(null)}
+        onComplete={() => completeUnit(selectedUnit.id)}
+      />
     );
   }
 
@@ -344,7 +147,7 @@ const ModuleOverview = () => {
         </TabsList>
         
         <TabsContent value="units" className="space-y-4">
-          {module.units.map((unit: any, index: number) => (
+          {module.units.map((unit, index) => (
             <Card key={unit.id} className={`border border-slate-200 ${unit.locked ? 'opacity-75' : ''}`}>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
@@ -381,7 +184,11 @@ const ModuleOverview = () => {
                         Locked
                       </Button>
                     ) : (
-                      <Button variant={unit.completed ? "outline" : "default"} className={unit.completed ? "text-cyber-text-secondary" : "bg-cyber-primary hover:bg-cyber-primary/90"}>
+                      <Button 
+                        variant={unit.completed ? "outline" : "default"} 
+                        className={unit.completed ? "text-cyber-text-secondary" : "bg-cyber-primary hover:bg-cyber-primary/90"}
+                        onClick={() => setSelectedUnit(unit)}
+                      >
                         {unit.completed ? "Review" : "Start"}
                       </Button>
                     )}
@@ -397,7 +204,7 @@ const ModuleOverview = () => {
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold mb-4 font-display">Learning Objectives</h3>
               <ul className="space-y-3">
-                {module.objectives.map((objective: string, index: number) => (
+                {module.objectives.map((objective, index) => (
                   <li key={index} className="flex items-start">
                     <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-primary/10 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-xs font-bold text-cyber-primary">{index + 1}</span>
@@ -411,6 +218,15 @@ const ModuleOverview = () => {
         </TabsContent>
       </Tabs>
     </div>
+  );
+};
+
+// Wrapper component that provides context
+const ModuleOverview = () => {
+  return (
+    <ModuleProvider>
+      <ModuleOverviewContent />
+    </ModuleProvider>
   );
 };
 
