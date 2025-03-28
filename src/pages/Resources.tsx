@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FileText, Video, BookOpen, Tool, Search, ExternalLink } from "lucide-react";
+import { FileText, Video, BookOpen, Wrench, Search, ExternalLink } from "lucide-react";
 
 // Define the type for resource items
 type ResourceType = "article" | "video" | "course" | "tool";
@@ -127,7 +127,7 @@ const Resources = () => {
       case "course":
         return <BookOpen className="h-5 w-5" />;
       case "tool":
-        return <Tool className="h-5 w-5" />;
+        return <Wrench className="h-5 w-5" />;
       default:
         return <FileText className="h-5 w-5" />;
     }
