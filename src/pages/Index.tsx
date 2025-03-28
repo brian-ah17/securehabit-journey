@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Lock, Eye, BookOpen } from "lucide-react";
@@ -21,7 +20,7 @@ const Index = () => {
                 A complete cybersecurity training platform designed for everyone. Learn essential 
                 skills to protect yourself online, recognize threats, and build secure digital habits.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button 
                   asChild
                   size="lg" 
@@ -31,14 +30,6 @@ const Index = () => {
                     Start Learning
                     <ArrowRight size={18} className="ml-2" />
                   </Link>
-                </Button>
-                <Button 
-                  asChild
-                  variant="outline" 
-                  size="lg" 
-                  className="border-white text-white hover:bg-white/10"
-                >
-                  <Link to="/about">Learn More</Link>
                 </Button>
               </div>
             </div>
