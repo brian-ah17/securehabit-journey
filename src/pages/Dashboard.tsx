@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { 
   Shield, 
@@ -15,7 +14,6 @@ import ModuleCard from "@/components/dashboard/ModuleCard";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
-  const [userName, setUserName] = useState("User");
   const [userProgress, setUserProgress] = useState({
     progress: 25,
     points: 120,
@@ -25,15 +23,6 @@ const Dashboard = () => {
       requiredPoints: 200,
     },
   });
-
-  // Simulating loading user data
-  useEffect(() => {
-    // In a real app, this would fetch from an API or state management
-    const timer = setTimeout(() => {
-      setUserName("onlly");
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Mock modules data
   const modules = [
@@ -98,7 +87,7 @@ const Dashboard = () => {
     <div className="container mx-auto px-4 py-8">
       {/* Welcome and overview */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold font-display mb-2">Welcome back, {userName}!</h1>
+        <h1 className="text-3xl font-bold font-display mb-2">Welcome Back!</h1>
         <p className="text-cyber-text-secondary">
           Continue your cybersecurity training journey.
         </p>
