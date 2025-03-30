@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import ModuleOverview from "./pages/ModuleOverview";
 import Resources from "./pages/Resources";
+import About from "./pages/About";
+import Login from "./pages/Login";
 import DashboardLayout from "./components/layout/DashboardLayout";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
               <Resources />
             </DashboardLayout>
           } />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />

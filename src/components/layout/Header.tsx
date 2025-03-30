@@ -34,9 +34,11 @@ const Header = () => {
           <Link to="/about" className="font-medium text-cyber-text-secondary hover:text-cyber-primary transition-colors">
             About
           </Link>
-          <Button variant="outline" size="sm" className="ml-4 flex items-center gap-2">
-            <User size={16} />
-            <span>Account</span>
+          <Button asChild variant="outline" size="sm" className="ml-4 flex items-center gap-2">
+            <Link to="/login">
+              <User size={16} />
+              <span>Account</span>
+            </Link>
           </Button>
         </nav>
 
@@ -78,9 +80,11 @@ const Header = () => {
               >
                 About
               </Link>
-              <Button variant="outline" size="sm" className="w-full justify-center items-center gap-2">
-                <User size={16} />
-                <span>Account</span>
+              <Button asChild variant="outline" size="sm" className="w-full justify-center items-center gap-2">
+                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                  <User size={16} />
+                  <span>Account</span>
+                </Link>
               </Button>
             </div>
           </div>
