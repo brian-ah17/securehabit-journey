@@ -30,7 +30,7 @@ const Dashboard = () => {
   useEffect(() => {
     // In a real app, this would fetch from an API or state management
     const timer = setTimeout(() => {
-      setUserName("Alex");
+      setUserName("onlly");
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
