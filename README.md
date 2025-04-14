@@ -15,6 +15,7 @@ Technologies Used
 	•	Authentication: JWT (JSON Web Tokens)
 
 Installation
+
 	1.	Clone the repository:
 
 git clone https://github.com/brian-ah17/securehabit-journey.git
