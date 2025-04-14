@@ -31,7 +31,7 @@ Installation
 
 4.	Set up environment variables:
    
-Create a .env file in the root directory and add the necessary environment variables as specified in the documentation.
+	Create a .env file in the root directory and add the necessary environment variables as specified in the documentation.
 
 
 5.	Run the application:
@@ -39,15 +39,6 @@ Create a .env file in the root directory and add the necessary environment varia
   		npm start
 
 
-
-Contributing
-
-Contributions are welcome! Please follow these steps:
-	1.	Fork the repository.
-	2.	Create a new branch: git checkout -b feature/your-feature-name.
-	3.	Make your changes and commit them: git commit -m 'Add your message here'.
-	4.	Push to the branch: git push origin feature/your-feature-name.
-	5.	Open a pull request.
 
 License
 
