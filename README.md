@@ -16,26 +16,27 @@ Technologies Used
 
 Installation
 
-	1.	Clone the repository:
+1.	Clone the repository:
 
-git clone https://github.com/brian-ah17/securehabit-journey.git
-
-
-	2.	Navigate to the project directory:
-
-cd securehabit-journey
+  		git clone https://github.com/brian-ah17/securehabit-journey.git
 
 
-	3.	Install dependencies:
+3.	Navigate to the project directory:
 
-npm install
+  		cd securehabit-journey
 
+3.	Install dependencies:
 
-	4.	Set up environment variables:
+		npm install
+
+4.	Set up environment variables:
+   
 Create a .env file in the root directory and add the necessary environment variables as specified in the documentation.
-	5.	Run the application:
 
-npm start
+
+5.	Run the application:
+
+  		npm start
 
 
 
