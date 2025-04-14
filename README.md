@@ -1,69 +1,52 @@
-# Welcome to your Lovable project
+**SecureHabit Journey**
 
-## Project info
+SecureHabit Journey is a web-based application designed to help users build and maintain secure habits through interactive modules and progress tracking.
 
-**URL**: https://lovable.dev/projects/bd52c7b0-b029-4a7a-ab1b-6a7780b1027f
+Features
+	•	User Authentication: Secure sign-up and login functionality to protect user data.
+	•	Interactive Modules: Engaging content to educate users on cybersecurity best practices.
+	•	Progress Tracking: Monitor your journey and achievements as you develop secure habits.
+	•	Responsive Design: Accessible on various devices for learning on the go.
 
-## How can I edit this code?
+Technologies Used
+	•	Frontend: React.js, HTML5, CSS3
+	•	Backend: Node.js, Express.js
+	•	Database: MongoDB
+	•	Authentication: JWT (JSON Web Tokens)
 
-There are several ways of editing your application.
+Installation
+	1.	Clone the repository:
 
-**Use Lovable**
+git clone https://github.com/brian-ah17/securehabit-journey.git
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bd52c7b0-b029-4a7a-ab1b-6a7780b1027f) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+	2.	Navigate to the project directory:
 
-**Use your preferred IDE**
+cd securehabit-journey
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+	3.	Install dependencies:
 
-Follow these steps:
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+	4.	Set up environment variables:
+Create a .env file in the root directory and add the necessary environment variables as specified in the documentation.
+	5.	Run the application:
 
-# Step 3: Install the necessary dependencies.
-npm i
+npm start
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Contributing
 
-**Use GitHub Codespaces**
+Contributions are welcome! Please follow these steps:
+	1.	Fork the repository.
+	2.	Create a new branch: git checkout -b feature/your-feature-name.
+	3.	Make your changes and commit them: git commit -m 'Add your message here'.
+	4.	Push to the branch: git push origin feature/your-feature-name.
+	5.	Open a pull request.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+License
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/bd52c7b0-b029-4a7a-ab1b-6a7780b1027f) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the MIT License. See the LICENSE file for details.
