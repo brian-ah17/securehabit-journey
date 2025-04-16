@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Video, BookOpen, Wrench, Search, ExternalLink } from "lucide-react";
 
-// Define the type for resource items
 type ResourceType = "article" | "video" | "course" | "tool";
 
 interface Resource {
@@ -21,7 +20,6 @@ const Resources = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<ResourceType | "all">("all");
 
-  // Resource data
   const resources: Resource[] = [
     {
       id: "1",
@@ -75,7 +73,7 @@ const Resources = () => {
       id: "7",
       title: "Secure Browsing Practices",
       description: "Learn how to browse the web safely and securely.",
-      url: "https://example.com/secure-browsing",
+      url: "https://www.thecyberhelpline.com/helpline-blog/2024/5/14/simple-steps-for-reducing-your-digital-footprint-on-social-media",
       type: "article",
       tags: ["browsing", "digital hygiene", "privacy"]
     },
@@ -83,7 +81,7 @@ const Resources = () => {
       id: "8",
       title: "Password Generator Tool",
       description: "Generate strong, random passwords with this online tool.",
-      url: "https://example.com/password-generator",
+      url: "https://1password.com/password-generator",
       type: "tool",
       tags: ["passwords", "tools", "generator"]
     },
@@ -99,13 +97,12 @@ const Resources = () => {
       id: "10",
       title: "Security Checkup Tool",
       description: "Scan your device for security vulnerabilities.",
-      url: "https://example.com/security-checkup",
+      url: "https://www.balbix.com/insights/what-to-know-about-vulnerability-scanning-and-tools/",
       type: "tool",
       tags: ["scanner", "vulnerability", "checkup"]
     }
   ];
 
-  // Filter resources based on search query and selected type
   const filteredResources = resources.filter(resource => {
     const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                          resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -116,7 +113,6 @@ const Resources = () => {
     return matchesSearch && matchesType;
   });
 
-  // Get icon based on resource type
   const getResourceIcon = (type: ResourceType) => {
     switch (type) {
       case "article":
@@ -139,7 +135,6 @@ const Resources = () => {
         Discover helpful articles, videos, courses, and tools to enhance your cybersecurity knowledge.
       </p>
       
-      {/* Search and filter */}
       <div className="mb-8">
         <div className="flex flex-col md:flex-row gap-4 mb-4">
           <div className="relative flex-1">
@@ -164,7 +159,6 @@ const Resources = () => {
         </Tabs>
       </div>
       
-      {/* Resource grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredResources.length > 0 ? (
           filteredResources.map((resource) => (
