@@ -28,7 +28,7 @@ const Resources = () => {
       id: "1",
       title: "Understanding Phishing Attacks",
       description: "Learn to identify and avoid common phishing techniques.",
-      url: "https://example.com/phishing-guide",
+      url: "https://www.thecyberhelpline.com/guides/phishing-threatening-emails#:~:text=A%20phishing%20attack%20is%20when,usernames%20%26%20passwords%20and%20security%20information.",
       type: "article",
       tags: ["phishing", "email security", "awareness"]
     },
@@ -36,7 +36,7 @@ const Resources = () => {
       id: "2",
       title: "Creating Strong Passwords",
       description: "Best practices for creating and managing secure passwords.",
-      url: "https://example.com/password-security",
+      url: "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email",
       type: "article",
       tags: ["passwords", "account security", "digital hygiene"]
     },
@@ -44,7 +44,7 @@ const Resources = () => {
       id: "3",
       title: "Social Engineering Explained",
       description: "Watch this video to understand how social engineering attacks work.",
-      url: "https://example.com/social-engineering-video",
+      url: "https://www.youtube.com/watch?v=uvKTMgWRPw4",
       type: "video",
       tags: ["social engineering", "awareness", "psychology"]
     },

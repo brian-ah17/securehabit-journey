@@ -1,6 +1,6 @@
-**SecureHabit Journey**
+**Secure Habits**
 
-SecureHabit Journey is a web-based application designed to help users build and maintain secure habits through interactive modules and progress tracking.
+Secure Habits is a web-based application designed to help users build and maintain secure habits through interactive modules and progress tracking.
 
 Features
 	•	User Authentication: Secure sign-up and login functionality to protect user data.

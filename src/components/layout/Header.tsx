@@ -19,7 +19,7 @@ const Header = () => {
         <Link to="/" className="flex items-center space-x-2">
           <Shield className="h-8 w-8 text-cyber-primary" />
           <span className="text-xl font-display font-semibold text-cyber-text-primary hidden sm:inline-block">
-            SecureHabit
+            Secure Habits
           </span>
         </Link>
 
