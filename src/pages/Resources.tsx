@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,7 +59,7 @@ const Resources = () => {
       id: "5",
       title: "Password Manager Comparison",
       description: "Compare different password managers to find the best one for your needs.",
-      url: "https://example.com/password-managers",
+      url: "https://www.pcmag.com/picks/the-best-password-managers",
       type: "article",
       tags: ["tools", "passwords", "comparison"]
     },
@@ -68,7 +67,7 @@ const Resources = () => {
       id: "6",
       title: "Two-Factor Authentication Tutorial",
       description: "Step-by-step guide to setting up 2FA on your accounts.",
-      url: "https://example.com/2fa-tutorial",
+      url: "https://www.ncsc.gov.uk/guidance/setting-2-step-verification-2sv",
       type: "video",
       tags: ["2FA", "account security", "tutorial"]
     },
