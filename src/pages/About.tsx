@@ -32,15 +32,6 @@ const About = () => {
           <Separator className="my-6" />
           
           <section>
-            <h2 className="text-xl font-semibold font-display text-cyber-text-primary mb-3">Design Influences</h2>
-            <p className="text-cyber-text-secondary">
-              The current interface—minimal, clean, and intuitive—was inspired by user-centric design principles prioritising accessibility, especially for those with limited digital fluency. The design is purposefully non-technical, focusing on clarity of language, visual learning aids, and modular content structure, all shaped by instructional design theories such as ADDIE and Protection Motivation Theory.
-            </p>
-          </section>
-          
-          <Separator className="my-6" />
-          
-          <section>
             <h2 className="text-xl font-semibold font-display text-cyber-text-primary mb-3">Learnings</h2>
             <p className="text-cyber-text-secondary mb-4">
               Key insights from the project that shaped the development of SecureHabit include:
