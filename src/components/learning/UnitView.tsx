@@ -1,10 +1,10 @@
-
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import QuestionCard, { Question } from "./QuestionCard";
 import { ArrowLeft, Award, Sparkles, CheckCircle } from "lucide-react";
 import confetti from "canvas-confetti";
+import CyberThreatsLesson from "./CyberThreatsLesson";
 
 type UnitViewProps = {
   unitId: string;
@@ -17,6 +17,7 @@ type UnitViewProps = {
 };
 
 const UnitView = ({ 
+  unitId,
   title, 
   type, 
   content, 
@@ -29,7 +30,6 @@ const UnitView = ({
   const [showCompletion, setShowCompletion] = useState(false);
   const [score, setScore] = useState(0);
 
-  // Calculate score based on correct answers
   useEffect(() => {
     if (answeredCorrectly.length > 0) {
       const correctCount = answeredCorrectly.filter(correct => correct).length;
@@ -37,7 +37,6 @@ const UnitView = ({
     }
   }, [answeredCorrectly]);
 
-  // Fire confetti when unit is completed successfully
   useEffect(() => {
     if (showCompletion && score > 60) {
       confetti({
@@ -53,10 +52,8 @@ const UnitView = ({
     setAnsweredCorrectly(newAnsweredCorrectly);
     
     if (currentQuestionIndex < questions.length - 1) {
-      // Move to next question
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // Completed all questions
       setShowCompletion(true);
     }
   };
@@ -65,7 +62,6 @@ const UnitView = ({
     onComplete();
   };
 
-  // Show completion screen when all questions are answered
   if (showCompletion) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -140,7 +136,9 @@ const UnitView = ({
             <CardTitle>{title}</CardTitle>
           </CardHeader>
           <CardContent>
-            {content || (
+            {unitId === "awareness-2" ? (
+              <CyberThreatsLesson />
+            ) : content || (
               <div className="text-center py-8">
                 <p className="text-cyber-text-secondary mb-4">
                   Content for this {type} is being developed.
