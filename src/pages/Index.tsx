@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Lock, Eye, BookOpen } from "lucide-react";
@@ -14,11 +15,11 @@ const Index = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 font-display">
-                Strengthen Your Digital Defense
+                Strengthen Your Digital Defence
               </h1>
               <p className="text-lg md:text-xl text-white/80 mb-8">
                 A complete cybersecurity training platform designed for everyone. Learn essential 
-                skills to protect yourself online, recognize threats, and build secure digital habits.
+                skills to protect yourself online, recognise threats, and build secure digital habits.
               </p>
               <div className="flex justify-center">
                 <Button 
@@ -81,7 +82,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3 font-display">Threat Recognition</h3>
                 <p className="text-cyber-text-secondary">
-                  Practice identifying phishing attempts, scams, and social engineering tactics through realistic simulations.
+                  Practise identifying phishing attempts, scams, and social engineering tactics through realistic simulations.
                 </p>
               </div>
             </div>
@@ -94,7 +95,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-4 font-display">Ready to build your cyber defense skills?</h3>
+                  <h3 className="text-2xl font-bold mb-4 font-display">Ready to build your cyber defence skills?</h3>
                   <p className="text-cyber-text-secondary mb-6">
                     Start your training journey today and learn how to protect yourself in the digital world.
                   </p>
@@ -130,7 +131,7 @@ const Index = () => {
                       <div className="flex-shrink-0 h-5 w-5 rounded-full bg-white/20 flex items-center justify-center mr-3 mt-0.5">
                         <span className="text-xs font-bold">3</span>
                       </div>
-                      <span>Recognizing & Reporting Threats</span>
+                      <span>Recognising & Reporting Threats</span>
                     </li>
                     <li className="flex items-start">
                       <div className="flex-shrink-0 h-5 w-5 rounded-full bg-white/20 flex items-center justify-center mr-3 mt-0.5">
