@@ -26,7 +26,7 @@ const threats: ThreatInfo[] = [
       "Over 60% of people have clicked on a phishing link in the past year"
     ],
     icon: <Mail className="w-6 h-6" />,
-    image: "/placeholders/photo-1461749280684-dccba630e2f6"
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
   },
   {
     title: "Malware",
@@ -38,7 +38,7 @@ const threats: ThreatInfo[] = [
       "Mobile malware attacks increased by 50% in the past year"
     ],
     icon: <Bug className="w-6 h-6" />,
-    image: "/placeholders/photo-1518770660439-4636190af475"
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
   },
   {
     title: "Data Breaches",
@@ -50,7 +50,7 @@ const threats: ThreatInfo[] = [
       "The average time to identify a breach is 207 days"
     ],
     icon: <Database className="w-6 h-6" />,
-    image: "/placeholders/photo-1526374965328-7f61d4dc18c5"
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
   },
   {
     title: "Social Engineering",
@@ -62,7 +62,7 @@ const threats: ThreatInfo[] = [
       "33% of data breaches involve social engineering"
     ],
     icon: <MessageSquareX className="w-6 h-6" />,
-    image: "/placeholders/photo-1605810230434-7631ac76ec81"
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
   }
 ];
 
@@ -117,6 +117,7 @@ const CyberThreatsLesson = () => {
                 src={currentThreat.image} 
                 alt={currentThreat.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 
