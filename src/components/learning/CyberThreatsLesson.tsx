@@ -22,7 +22,7 @@ const threats: ThreatInfo[] = [
     example: "An email claiming to be from your bank requesting urgent verification of your account details.",
     keyFacts: [
       "91% of cyber attacks start with a phishing email",
-      "Average cost of a phishing attack on an organization is $4.65 million",
+      "Average cost of a phishing attack on an organisation is £3.7 million",
       "Over 60% of people have clicked on a phishing link in the past year"
     ],
     icon: <Mail className="w-6 h-6" />,
@@ -30,11 +30,11 @@ const threats: ThreatInfo[] = [
   },
   {
     title: "Malware",
-    description: "Malicious software designed to disrupt, damage, or gain unauthorized access to computer systems.",
+    description: "Malicious software designed to disrupt, damage, or gain unauthorised access to computer systems.",
     example: "A free software download that secretly installs ransomware on your device.",
     keyFacts: [
-      "Over 450,000 new malicious programs are registered every day",
-      "Ransomware damage costs exceeded $20 billion in 2023",
+      "Over 450,000 new malicious programmes are registered every day",
+      "Ransomware damage costs exceeded £16 billion in 2023",
       "Mobile malware attacks increased by 50% in the past year"
     ],
     icon: <Bug className="w-6 h-6" />,
@@ -42,10 +42,10 @@ const threats: ThreatInfo[] = [
   },
   {
     title: "Data Breaches",
-    description: "Unauthorized access to confidential information, often resulting in stolen personal or financial data.",
+    description: "Unauthorised access to confidential information, often resulting in stolen personal or financial data.",
     example: "A company's customer database being hacked and personal information being sold on the dark web.",
     keyFacts: [
-      "Average cost of a data breach is $4.45 million globally",
+      "Average cost of a data breach is £3.5 million globally",
       "58% of data breaches involve personal data",
       "The average time to identify a breach is 207 days"
     ],
@@ -58,7 +58,7 @@ const threats: ThreatInfo[] = [
     example: "A caller pretending to be tech support to gain remote access to your computer.",
     keyFacts: [
       "98% of cyber attacks rely on social engineering",
-      "Average cost of a social engineering attack is $130,000",
+      "Average cost of a social engineering attack is £103,000",
       "33% of data breaches involve social engineering"
     ],
     icon: <MessageSquareX className="w-6 h-6" />,
