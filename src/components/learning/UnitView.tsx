@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -136,7 +137,7 @@ const UnitView = ({
             <CardTitle>{title}</CardTitle>
           </CardHeader>
           <CardContent>
-            {unitId === "awareness-2" ? (
+            {(unitId === "awareness-2" || unitId === "unit-2") ? (
               <CyberThreatsLesson />
             ) : content || (
               <div className="text-center py-8">
