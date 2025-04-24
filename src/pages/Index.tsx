@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Lock, Eye, BookOpen } from "lucide-react";
@@ -36,11 +35,9 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Decorative pattern */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTUgMHYzME0wIDE1aDMwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==')] opacity-20 mix-blend-overlay" />
         </section>
         
-        {/* Features Section */}
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
@@ -89,7 +86,6 @@ const Index = () => {
           </div>
         </section>
         
-        {/* CTA Section */}
         <section className="bg-slate-50 py-16">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
@@ -109,6 +105,7 @@ const Index = () => {
                     </Link>
                   </Button>
                 </div>
+                
                 <div className="md:w-1/2 bg-gradient-to-br from-cyber-primary to-cyber-secondary p-8 md:p-12 text-white flex flex-col justify-center">
                   <div className="flex items-center mb-4">
                     <BookOpen className="mr-3 h-6 w-6" />
@@ -150,7 +147,6 @@ const Index = () => {
         </section>
       </main>
       
-      {/* Footer */}
       <footer className="bg-white border-t border-slate-200 py-8">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
