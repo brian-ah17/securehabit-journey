@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { Slider } from "@/components/ui/slider";
 import { Shield, Mail, Bug, Database, MessageSquareX, Lock, Smartphone, Fingerprint } from "lucide-react";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 interface ContentInfo {
   title: string;
@@ -122,18 +121,15 @@ const CyberThreatsLesson = () => {
   const [currentContentIndex, setCurrentContentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const { moduleId } = useParams<{ moduleId: string }>();
+  const navigate = useNavigate();
   
   const contentItems = moduleId === 'digital-hygiene' ? twoFactorAuthInfo : cyberThreats;
   const currentContent = contentItems[currentContentIndex];
   
-  // Update progress calculation to properly reach 100%
   useEffect(() => {
-    // If there's only one item, progress should be 100%
     if (contentItems.length === 1) {
       setProgress(100);
     } else {
-      // Calculate progress based on current index
-      // For last item, ensure it's 100%
       const calculatedProgress = currentContentIndex === contentItems.length - 1 
         ? 100 
         : Math.round((currentContentIndex / (contentItems.length - 1)) * 100);
@@ -151,6 +147,10 @@ const CyberThreatsLesson = () => {
     if (currentContentIndex > 0) {
       setCurrentContentIndex(currentContentIndex - 1);
     }
+  };
+
+  const handleFinish = () => {
+    navigate('/dashboard');
   };
 
   return (
@@ -225,13 +225,22 @@ const CyberThreatsLesson = () => {
         >
           Previous
         </Button>
-        <Button
-          onClick={handleNext}
-          disabled={currentContentIndex === contentItems.length - 1}
-          className="bg-cyber-primary hover:bg-cyber-primary/90"
-        >
-          Next
-        </Button>
+        {progress === 100 ? (
+          <Button
+            onClick={handleFinish}
+            className="bg-cyber-primary hover:bg-cyber-primary/90"
+          >
+            Finish Lesson
+          </Button>
+        ) : (
+          <Button
+            onClick={handleNext}
+            disabled={currentContentIndex === contentItems.length - 1}
+            className="bg-cyber-primary hover:bg-cyber-primary/90"
+          >
+            Next
+          </Button>
+        )}
       </div>
     </div>
   );
