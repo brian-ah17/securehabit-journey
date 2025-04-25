@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -78,7 +77,7 @@ const twoFactorAuthInfo: ContentInfo[] = [
       "Less than 20% of users enable 2FA when it's optional"
     ],
     icon: <Lock className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1000&auto=format&fit=crop"
   },
   {
     title: "Authentication Methods",
@@ -90,7 +89,7 @@ const twoFactorAuthInfo: ContentInfo[] = [
       "Biometric authentication like fingerprints can be both secure and convenient"
     ],
     icon: <Smartphone className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1619469188029-697d5b7cba83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1000&auto=format&fit=crop"
   },
   {
     title: "Setting Up 2FA",
@@ -102,7 +101,7 @@ const twoFactorAuthInfo: ContentInfo[] = [
       "Consider using different 2FA methods for your most important accounts"
     ],
     icon: <Shield className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1558014333-45695a29971a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1000&auto=format&fit=crop"
   },
   {
     title: "Beyond 2FA: Advanced Security",
@@ -114,7 +113,7 @@ const twoFactorAuthInfo: ContentInfo[] = [
       "Passwordless authentication aims to replace passwords entirely with more secure methods"
     ],
     icon: <Fingerprint className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1614064642761-243af6f2a025?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
   }
 ];
 
@@ -123,7 +122,6 @@ const CyberThreatsLesson = () => {
   const [progress, setProgress] = useState(0);
   const { moduleId } = useParams<{ moduleId: string }>();
   
-  // Determine which content to show based on the module
   const contentItems = moduleId === 'digital-hygiene' ? twoFactorAuthInfo : cyberThreats;
   const currentContent = contentItems[currentContentIndex];
 
