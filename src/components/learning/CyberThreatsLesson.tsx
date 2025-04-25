@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -124,18 +125,31 @@ const CyberThreatsLesson = () => {
   
   const contentItems = moduleId === 'digital-hygiene' ? twoFactorAuthInfo : cyberThreats;
   const currentContent = contentItems[currentContentIndex];
+  
+  // Update progress calculation to properly reach 100%
+  useEffect(() => {
+    // If there's only one item, progress should be 100%
+    if (contentItems.length === 1) {
+      setProgress(100);
+    } else {
+      // Calculate progress based on current index
+      // For last item, ensure it's 100%
+      const calculatedProgress = currentContentIndex === contentItems.length - 1 
+        ? 100 
+        : Math.round((currentContentIndex / (contentItems.length - 1)) * 100);
+      setProgress(calculatedProgress);
+    }
+  }, [currentContentIndex, contentItems.length]);
 
   const handleNext = () => {
     if (currentContentIndex < contentItems.length - 1) {
       setCurrentContentIndex(currentContentIndex + 1);
-      setProgress(((currentContentIndex + 1) / contentItems.length) * 100);
     }
   };
 
   const handlePrevious = () => {
     if (currentContentIndex > 0) {
       setCurrentContentIndex(currentContentIndex - 1);
-      setProgress(((currentContentIndex - 1) / contentItems.length) * 100);
     }
   };
 
@@ -144,7 +158,7 @@ const CyberThreatsLesson = () => {
       <div className="mb-8">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm text-cyber-text-secondary">Progress</span>
-          <span className="text-sm font-medium">{Math.round(progress)}%</span>
+          <span className="text-sm font-medium">{progress}%</span>
         </div>
         <Slider
           value={[progress]}
