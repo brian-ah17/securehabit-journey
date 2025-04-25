@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { 
   Shield, 
@@ -46,7 +47,7 @@ const Dashboard = () => {
     },
     {
       id: "threat-detection",
-      title: "Recognizing Threats",
+      title: "Recognising Threats",
       description: "Identify phishing, scams, and other common cyber threats.",
       icon: <AlertTriangle className="h-6 w-6 text-cyber-primary" />,
       progress: 0,

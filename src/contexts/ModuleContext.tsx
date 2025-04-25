@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Question } from "../components/learning/QuestionCard";
@@ -19,7 +20,7 @@ const moduleQuestions = {
             "Social Engineering"
           ],
           correctAnswer: 2,
-          explanation: "Microwaving is not a cyber attack. Phishing, ransomware, and social engineering are all common types of cyber attacks that target individuals and organizations."
+          explanation: "Microwaving is not a cyber attack. Phishing, ransomware, and social engineering are all common types of cyber attacks that target individuals and organisations."
         },
         {
           id: "q2",
@@ -28,7 +29,7 @@ const moduleQuestions = {
             "Steal personal information",
             "Lock access to data until a ransom is paid",
             "Delete all data permanently",
-            "Gain unauthorized network access"
+            "Gain unauthorised network access"
           ],
           correctAnswer: 1,
           explanation: "Ransomware attacks encrypt or lock access to the victim's data, and the attackers demand a ransom payment (usually in cryptocurrency) to restore access."
@@ -112,7 +113,7 @@ const moduleQuestions = {
             "Social media platforms"
           ],
           correctAnswer: 2,
-          explanation: "Law enforcement agencies, such as the FBI in the US or specialized cybercrime units in other countries, have the primary responsibility for investigating cybercrimes."
+          explanation: "Law enforcement agencies, such as the National Crime Agency in the UK or specialised cybercrime units in other countries, have the primary responsibility for investigating cybercrimes."
         },
         {
           id: "q2",
@@ -163,7 +164,7 @@ const modulesData: Record<string, Module> = {
       "Understand common types of cybercrime",
       "Learn how cybercriminals target individuals",
       "Develop a cybersecurity mindset",
-      "Recognize the importance of digital self-defense"
+      "Recognise the importance of digital self-defence"
     ],
     units: [
       {
@@ -256,14 +257,14 @@ const modulesData: Record<string, Module> = {
     ]
   },
   "threat-detection": {
-    title: "Recognizing Threats",
+    title: "Recognising Threats",
     description: "Learn to identify phishing attempts, scams, and other common cyber threats through practical examples.",
     progress: 0,
     estimatedTime: "40 minutes",
     points: 60,
     objectives: [
       "Identify phishing emails and messages",
-      "Recognize social engineering techniques",
+      "Recognise social engineering techniques",
       "Detect common online scams",
       "Learn proper reporting procedures"
     ],
@@ -320,7 +321,7 @@ const modulesData: Record<string, Module> = {
       "Understand cybersecurity regulations",
       "Learn about law enforcement's role",
       "Know your rights and responsibilities",
-      "Recognize reporting procedures"
+      "Recognise reporting procedures"
     ],
     units: [
       {
