@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -13,7 +12,6 @@ type ModuleCardProps = {
   icon: React.ReactNode;
   progress: number;
   isLocked: boolean;
-  estimatedTime: string;
 };
 
 const ModuleCard = ({
@@ -23,7 +21,6 @@ const ModuleCard = ({
   icon,
   progress,
   isLocked,
-  estimatedTime,
 }: ModuleCardProps) => {
   // Determine badge variant based on progress and lock status
   const getBadgeVariant = () => {
@@ -51,7 +48,6 @@ const ModuleCard = ({
         <div className="space-y-2">
           <div className="flex justify-between text-xs text-cyber-text-secondary">
             <span>{progress}% complete</span>
-            <span>{estimatedTime}</span>
           </div>
           <Progress value={progress} className="h-1.5" />
         </div>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { 
   Shield, 
@@ -17,7 +16,6 @@ import { Link } from "react-router-dom";
 const Dashboard = () => {
   const [userProgress, setUserProgress] = useState({
     progress: 25,
-    points: 120,
     streak: 3,
     nextBadge: {
       name: "Cyber Guardian",
@@ -34,7 +32,6 @@ const Dashboard = () => {
       icon: <Shield className="h-6 w-6 text-cyber-primary" />,
       progress: 75,
       isLocked: false,
-      estimatedTime: "30 min",
     },
     {
       id: "digital-hygiene",
@@ -43,7 +40,6 @@ const Dashboard = () => {
       icon: <Lock className="h-6 w-6 text-cyber-primary" />,
       progress: 40,
       isLocked: false,
-      estimatedTime: "45 min",
     },
     {
       id: "threat-detection",
@@ -52,7 +48,6 @@ const Dashboard = () => {
       icon: <AlertTriangle className="h-6 w-6 text-cyber-primary" />,
       progress: 0,
       isLocked: false,
-      estimatedTime: "40 min",
     },
     {
       id: "legal-context",
@@ -61,7 +56,6 @@ const Dashboard = () => {
       icon: <GraduationCap className="h-6 w-6 text-cyber-primary" />,
       progress: 0,
       isLocked: true,
-      estimatedTime: "35 min",
     },
   ];
 
