@@ -45,7 +45,7 @@ const Index = () => {
                 Learn Practical Cybersecurity Skills
               </h2>
               <p className="text-lg text-cyber-text-secondary">
-                Our framework is designed to help you build real-world security skills through interactive exercises and practical simulations.
+                This application is designed to help you build real-world security skills through interactive exercises.
               </p>
             </div>
             
@@ -93,7 +93,7 @@ const Index = () => {
                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                   <h3 className="text-2xl font-bold mb-4 font-display">Ready to build your cyber defence skills?</h3>
                   <p className="text-cyber-text-secondary mb-6">
-                    Start your training journey today and learn how to protect yourself in the digital world.
+                    Start your journey today and learn how to protect yourself in the digital world.
                   </p>
                   <Button 
                     asChild
@@ -152,10 +152,10 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <Shield className="h-6 w-6 text-cyber-primary mr-2" />
-              <span className="font-display font-semibold text-cyber-text-primary">SecureHabit</span>
+              <span className="font-display font-semibold text-cyber-text-primary">SecureHabits</span>
             </div>
             <div className="text-cyber-text-secondary text-sm">
-              © {new Date().getFullYear()} SecureHabit. All rights reserved.
+              © {new Date().getFullYear()} SecureHabits.
             </div>
           </div>
         </div>
