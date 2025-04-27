@@ -67,7 +67,7 @@ const ModuleOverviewContent = () => {
         <div className="text-center py-12">
           <h2 className="text-2xl font-bold mb-4 font-display">Module Not Found</h2>
           <p className="text-cyber-text-secondary mb-6">
-            Sorry, the module you're looking for doesn't exist or isn't available yet.
+            Sorry, the module you're looking for isn't available yet.
           </p>
           <Button asChild>
             <Link to="/dashboard">Return to Dashboard</Link>
