@@ -50,7 +50,7 @@ const Login = () => {
               <Shield className="h-8 w-8 text-cyber-primary" />
             </div>
             <h2 className="text-2xl font-bold font-display text-cyber-text-primary">Welcome to SecureHabit</h2>
-            <p className="mt-2 text-cyber-text-secondary">Sign in to track your progress and access all features</p>
+            <p className="mt-2 text-cyber-text-secondary">Sign in to track your progress.</p>
           </div>
           
           <div className="space-y-4">
@@ -74,7 +74,7 @@ const Login = () => {
             
             <div className="text-center pt-4">
               <p className="text-xs text-cyber-text-secondary">
-                By continuing, you agree to SecureHabit's Terms of Service and Privacy Policy
+                By continuing, you agree to the Terms of Service and Privacy Policy
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Login = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex justify-center items-center">
             <div className="text-cyber-text-secondary text-sm">
-              © {new Date().getFullYear()} SecureHabit. All rights reserved.
+              © {new Date().getFullYear()} SecureHabits.
             </div>
           </div>
         </div>
