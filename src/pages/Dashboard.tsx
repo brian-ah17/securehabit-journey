@@ -155,7 +155,7 @@ const Dashboard = () => {
       <div className="mb-4">
         <h2 className="text-2xl font-bold font-display mb-1">Learning Modules</h2>
         <p className="text-cyber-text-secondary mb-6">
-          Complete all modules to become cyber-savvy.
+          Complete all modules to become a cyber guardian.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map((module) => (
