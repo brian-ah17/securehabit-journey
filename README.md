@@ -36,7 +36,7 @@ Installation
 
 5.	Run the application:
 
-  		npm start
+  		npm run dev
 
 
 
